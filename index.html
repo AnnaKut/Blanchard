@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+  />
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <div class="main-header">
+      <div class="container flex header-container">
+        <div class="burger menu-burger">
+          <button id="burger" class="burger-link" aria-label="меню">
+            <img src="img/Burger.svg" class="burger-img" alt="меню">
+          </button>
+        </div>
+        <a href="#" class="logo">
+          <img src="img/Blanchard.svg" class="header-logo">
+          <img src="img/художественная галерея.svg" class="header-logo">
+        </a>
+        <div id="menu" class="flex menu-nav">
+          <nav class="header-nav">
+            <ul class="header-list menu-list">
+              <li class="header-item menu-item">
+                <a href="#about" class="header-nav-link" aria-label="О нас" tabindex="2">О нас</a>
+              </li>
+              <li class="header-item menu-item" tabindex="3">
+                <a href="#gallery" class="header-nav-link" aria-label="Галерея">Галерея</a>
+              </li>
+              <li class="header-item menu-item" tabindex="4">
+                <a href="#catalog" class="header-nav-link" aria-label="Каталог">Каталог</a>
+              </li>
+              <li class="header-item menu-item" tabindex="5">
+                <a href="#events" class="header-nav-link" aria-label="События">События</a>
+              </li>
+              <li class="header-item menu-item" tabindex="6">
+                <a href="#editions" class="header-nav-link" aria-label="Издания">Издания</a>
+              </li>
+              <li class="header-item menu-item" tabindex="6">
+                <a href="#projects" class="header-nav-link" aria-label="Проекты">Проекты</a>
+              </li>
+              <li class="header-item menu-item" tabindex="6">
+                <a href="#contacts" class="header-nav-link" aria-label="Контакты">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="enter-menu">
+            <a href="#" class="enter-link" aria-label="Войти в личный кабинет">Войти</a>
+          </div>
+        </div>
+        <div class="enter">
+          <a href="#" class="enter-link" aria-label="Войти в личный кабинет">Войти</a>
+        </div>
+        <div class="search">
+          <button class="search-link" aria-label="поиск" tabindex="7">
+            <img src="img/Search.svg" class="search-img" alt="поиск">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-banner">
+      <div class="flex container">
+        <ul class="flex">
+          <li class="header-banner-art">
+            <a href="#" class="header-banner-btn" data-path="one">Реализм</a>
+            <ul class="header-banner-list" data-simplebar data-target="one">
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Репин</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Икинс</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Курбе</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Милле</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Уайет</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Хоппер</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Мане</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Бонёр</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Саврасов</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Шишкин</a></li>
+            </ul>
+          </li>
+          <li class="header-banner-art">
+            <a href="#" class="header-banner-btn" data-path="two">Импрессионизм</a>
+            <ul class="header-banner-list" data-simplebar data-target="two">
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Дюпре</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Сислей</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Писсаро</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Моне</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Коровин</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Буден</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Фатотти</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Ренуар</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Дега</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Мане</a></li>
+            </ul>
+          </li>
+          <li class="header-banner-art">
+            <a href="#" class="header-banner-btn" data-path="three">Постимпрессионизм</a>
+            <ul class="header-banner-list" data-simplebar data-target="three">
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Ван Гог</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Гоген</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Сезанн</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Россо</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Осборн</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Бернар</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Боннар</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Фрай</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Лаваль</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Котте</a></li>
+            </ul>
+          </li>
+          <li class="header-banner-art">
+            <a href="#" class="header-banner-btn" data-path="four">Авангард</a>
+            <ul class="header-banner-list" data-simplebar data-target="four">
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Малевич</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Богомазов</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Пиросмани</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Гончарова</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Кульбин</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Бранкузи</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Шварц</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Альтман</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Лисицкий</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Родченко</a></li>
+            </ul>
+          </li>
+          <li class="header-banner-art">
+            <a href="#" class="header-banner-btn" data-path="five">Футуризм</a>
+            <ul class="header-banner-list" data-simplebar data-target="five">
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Гарсия</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Бурлюк</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Северини</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Балла</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Сирони</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Пальмов</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Руссоло</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Лаззари</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Мунари</a></li>
+              <li class="header-banner-item"><a class="header-banner-link" href="#">Сарра</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="header-search">
+          <form class="header-search-form">
+            <button class="header-search-btn"></button>
+            <input type="search" class="header-search-input" placeholder="Поиск по сайту">
+          </form>
+          
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="banner">
+      <div class="container">
+        <div class="banner">
+          <h1 class="first-title">Прикоснитесь<br> к прекрасному</h1>
+          <p class="banner-text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+          <a href="#contacts" class="btn banner-btn">Подписаться на рассылку</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about">
+        <h2 class="second-title">О нас</h2>
+        <p class="text about-text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
+      </div>
+    </section>
+    <section id="gallery"></section>
+    <section id="catalog"></section>
+    <section id="events"></section>
+    <section id="editions"></section>
+    <section id="projects"></section>
+    <section id="contacts"></section>
+  </main>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script>
+    new SimpleBar(document.querySelectorAll('header-banner-list'), {
+      scrollbarMaxSize: 84
+    });
+  </script>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

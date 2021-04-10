@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,150 +10,143 @@
   rel="stylesheet"
   href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
   />
+  <link href="css/choices.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="header">
     <div class="main-header">
-      <div class="container flex header-container">
-        <div class="burger menu-burger">
-          <button id="burger" class="burger-link" aria-label="меню">
-            <img src="img/Burger.svg" class="burger-img" alt="меню">
-          </button>
-        </div>
-        <a href="#" class="logo">
-          <img src="img/Blanchard.svg" class="header-logo">
-          <img src="img/художественная галерея.svg" class="header-logo">
+      <div class="container flex main-header__container">
+        <button id="burger" class="burger main-header__burger" aria-label="меню">
+          <img src="img/Burger.svg" class="burger__img" alt="меню">
+        </button>
+        <a href="#" class="logo main-header__logo">
+          <img src="img/Лого.svg" class="logo__img" alt="Логотип">
         </a>
-        <div id="menu" class="flex menu-nav">
-          <nav class="header-nav">
-            <ul class="header-list menu-list">
-              <li class="header-item menu-item">
-                <a href="#about" class="header-nav-link" aria-label="О нас" tabindex="2">О нас</a>
+        <div id="menu" class="flex main-header__menu">
+          <nav class="main-header__nav">
+            <ul class="main-header__list main-header__list_vertical">
+              <li class="main-header__item main-header__item_vertical">
+                <a href="#about" class="main-header__link">О нас</a>
               </li>
-              <li class="header-item menu-item" tabindex="3">
-                <a href="#gallery" class="header-nav-link" aria-label="Галерея">Галерея</a>
+              <li class="main-header__item main-header__item_vertical">
+                <a href="#gallery" class="main-header__link">Галерея</a>
               </li>
-              <li class="header-item menu-item" tabindex="4">
-                <a href="#catalog" class="header-nav-link" aria-label="Каталог">Каталог</a>
+              <li class="main-header__item main-header__item_vertical">
+                <a href="#catalog" class="main-header__link">Каталог</a>
               </li>
-              <li class="header-item menu-item" tabindex="5">
-                <a href="#events" class="header-nav-link" aria-label="События">События</a>
+              <li class="main-header__item main-header__item_vertical">
+                <a href="#events" class="main-header__link">События</a>
               </li>
-              <li class="header-item menu-item" tabindex="6">
-                <a href="#editions" class="header-nav-link" aria-label="Издания">Издания</a>
+              <li class="main-header__item main-header__item_vertical">
+                <a href="#editions" class="main-header__link">Издания</a>
               </li>
-              <li class="header-item menu-item" tabindex="6">
-                <a href="#projects" class="header-nav-link" aria-label="Проекты">Проекты</a>
+              <li class="main-header__item main-header__item_vertical">
+                <a href="#projects" class="main-header__link">Проекты</a>
               </li>
-              <li class="header-item menu-item" tabindex="6">
-                <a href="#contacts" class="header-nav-link" aria-label="Контакты">Контакты</a>
+              <li class="main-header__item main-header__item_vertical">
+                <a href="#contacts" class="main-header__link">Контакты</a>
               </li>
             </ul>
           </nav>
-          <div class="enter-menu">
-            <a href="#" class="enter-link" aria-label="Войти в личный кабинет">Войти</a>
-          </div>
         </div>
-        <div class="enter">
-          <a href="#" class="enter-link" aria-label="Войти в личный кабинет">Войти</a>
+        <div id="enter" class="main-header__enter">
+          <a href="#" class="main-header__enter-link" aria-label="Войти в личный кабинет">Войти</a>
         </div>
-        <div class="search">
-          <button class="search-link" aria-label="поиск" tabindex="7">
-            <img src="img/Search.svg" class="search-img" alt="поиск">
-          </button>
-        </div>
+        <button class="main-header__search search" aria-label="поиск">
+          <img src="img/Search.svg" class="search__img" alt="поиск">
+        </button>
       </div>
     </div>
 
-    <div class="header-banner">
+    <div class="secondary-header">
       <div class="flex container">
         <ul class="flex">
-          <li class="header-banner-art">
-            <a href="#" class="header-banner-btn" data-path="one">Реализм</a>
-            <ul class="header-banner-list" data-simplebar data-target="one">
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Репин</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Икинс</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Курбе</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Милле</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Уайет</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Хоппер</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Мане</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Бонёр</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Саврасов</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Шишкин</a></li>
+          <li class="secondary-header__art-direction art-direction">
+            <button class="art-direction__btn" data-path="one">Реализм</button>
+            <ul class="art-direction__artists-list" data-simplebar data-target="one">
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Репин</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Икинс</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Курбе</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Милле</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Уайет</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Хоппер</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Мане</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Бонёр</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Саврасов</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Шишкин</a></li>
             </ul>
           </li>
-          <li class="header-banner-art">
-            <a href="#" class="header-banner-btn" data-path="two">Импрессионизм</a>
-            <ul class="header-banner-list" data-simplebar data-target="two">
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Дюпре</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Сислей</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Писсаро</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Моне</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Коровин</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Буден</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Фатотти</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Ренуар</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Дега</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Мане</a></li>
+          <li class="secondary-header__art-direction art-direction">
+            <button class="art-direction__btn" data-path="two">Импрессионизм</button>
+            <ul class="art-direction__artists-list" data-simplebar data-target="two">
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Дюпре</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Сислей</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Писсаро</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Моне</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Коровин</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Буден</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Фатотти</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Ренуар</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Дега</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Мане</a></li>
             </ul>
           </li>
-          <li class="header-banner-art">
-            <a href="#" class="header-banner-btn" data-path="three">Постимпрессионизм</a>
-            <ul class="header-banner-list" data-simplebar data-target="three">
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Ван Гог</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Гоген</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Сезанн</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Россо</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Осборн</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Бернар</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Боннар</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Фрай</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Лаваль</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Котте</a></li>
+          <li class="secondary-header__art-direction art-direction">
+            <button class="art-direction__btn" data-path="three">Постимпрессионизм</button>
+            <ul class="art-direction__artists-list" data-simplebar data-target="three">
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Ван Гог</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Гоген</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Сезанн</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Россо</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Осборн</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Бернар</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Боннар</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Фрай</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Лаваль</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Котте</a></li>
             </ul>
           </li>
-          <li class="header-banner-art">
-            <a href="#" class="header-banner-btn" data-path="four">Авангард</a>
-            <ul class="header-banner-list" data-simplebar data-target="four">
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Малевич</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Богомазов</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Пиросмани</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Гончарова</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Кульбин</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Бранкузи</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Шварц</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Альтман</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Лисицкий</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Родченко</a></li>
+          <li class="secondary-header__art-direction art-direction">
+            <button class="art-direction__btn" data-path="four">Авангард</button>
+            <ul class="art-direction__artists-list" data-simplebar data-target="four">
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Малевич</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Богомазов</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Пиросмани</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Гончарова</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Кульбин</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Бранкузи</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Шварц</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Альтман</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Лисицкий</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Родченко</a></li>
             </ul>
           </li>
-          <li class="header-banner-art">
-            <a href="#" class="header-banner-btn" data-path="five">Футуризм</a>
-            <ul class="header-banner-list" data-simplebar data-target="five">
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Гарсия</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Бурлюк</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Северини</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Балла</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Сирони</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Пальмов</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Руссоло</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Лаззари</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Мунари</a></li>
-              <li class="header-banner-item"><a class="header-banner-link" href="#">Сарра</a></li>
+          <li class="secondary-header__art-direction art-direction">
+            <button class="art-direction__btn" data-path="five">Футуризм</button>
+            <ul class="art-direction__artists-list" data-simplebar data-target="five">
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Гарсия</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Бурлюк</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Северини</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Балла</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Сирони</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Пальмов</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Руссоло</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Лаззари</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Мунари</a></li>
+              <li class="art-direction__artists-item"><a class="art-direction__artist-link" href="#">Сарра</a></li>
             </ul>
           </li>
         </ul>
         
-        <div class="header-search">
-          <form class="header-search-form">
-            <button class="header-search-btn"></button>
-            <input type="search" class="header-search-input" placeholder="Поиск по сайту">
+        <div class="secondary-header__search">
+          <form class="secondary-header__search-form">
+            <button class="secondary-header__search-btn"></button>
+            <input type="search" class="secondary-header__search-input" placeholder="Поиск по сайту">
           </form>
-          
-
         </div>
       </div>
     </div>
@@ -161,11 +154,11 @@
 
   <main>
     <section id="banner">
-      <div class="container">
-        <div class="banner">
-          <h1 class="first-title">Прикоснитесь<br> к прекрасному</h1>
-          <p class="banner-text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
-          <a href="#contacts" class="btn banner-btn">Подписаться на рассылку</a>
+      <div class="banner">
+        <div class="container banner__block">
+          <h1 class="first-title">Прикоснитесь к прекрасному</h1>
+          <p class="banner__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+          <a href="#contacts" class="btn banner__btn">Подписаться на рассылку</a>
         </div>
       </div>
     </section>
@@ -173,15 +166,87 @@
     <section id="about">
       <div class="container about">
         <h2 class="second-title">О нас</h2>
-        <p class="text about-text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
+        <p class="text about__text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
       </div>
     </section>
-    <section id="gallery"></section>
-    <section id="catalog"></section>
-    <section id="events"></section>
-    <section id="editions"></section>
-    <section id="projects"></section>
-    <section id="contacts"></section>
+
+    <section id="gallery">
+      <div class="gallery">
+        <div class="container gallery__container">
+          <form class="gallery__form flex">
+            <h2 class="second-title gallery__title">Галерея</h2>
+            <p class="gallery__text gallery__text_filter">Фильтровать по:</p>
+            <select id="select" class="gallery__select-author">
+              <option class="gallery__author">Рублёв</option>
+              <option class="gallery__author">Репин</option>
+              <option class="gallery__author">Малевич</option>
+              <option class="gallery__author" selected>Автор</option>
+            </select>
+            <input class="gallery__input gallery__input_top" placeholder="Направление">
+            <input class="gallery__input gallery__input_bottom" placeholder="Техника">
+          </form>
+          <div class="gallery__swiper">
+            <div class="swiper-container">
+              <div class="gallery__navigation">
+                <div class="swiper-button-prev">
+                  <div class="gallery__arrow gallery__arrow_prev"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next">
+                  <div class="gallery__arrow gallery__arrow_next"></div>
+                </div>
+              </div>
+              <div class="swiper-wrapper">
+                <a href="#gallery" class="swiper-slide swiper-slide_img1"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img2"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img3"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img4"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img5"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img6"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img7"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img8"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img9"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img10"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img11"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img12"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img13"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img14"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img15"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img16"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img17"></a>
+                <a href="#gallery" class="swiper-slide swiper-slide_img18"></a>
+              </div>
+            </div>
+          </div>
+          <p class="gallery__text gallery__text_authorization">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="#enter" class="gallery__link">авторизуйтесь,</a> либо воспользуйтесь лицензией.</p>
+        </div>
+      </div>
+    </section>
+    <section id="catalog">
+      <div class="container">
+        <h2 class="second-title">Каталог</h2>
+      </div>
+    </section>
+    <section id="events">
+      <div class="container">
+        <h2 class="second-title">События</h2>
+      </div>
+    </section>
+    <section id="editions">
+      <div class="container">
+        <h2 class="second-title">Издания</h2>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <h2 class="second-title">Проекты</h2>
+      </div>
+    </section>
+    <section id="contacts">
+      <div class="container">
+        <h2 class="second-title">Контакты</h2>
+      </div>
+    </section>
   </main>
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script>
@@ -190,7 +255,54 @@
     });
   </script>
 
-
   <script src="js/main.js"></script>
+
+  <script src="js/choices.min.js"></script>
+
+  <script>
+    const element = document.querySelector('select');
+    const choices = new Choices(element, {
+      itemSelectText: '',
+      searchEnabled: false,
+      shouldSort: false,
+      renderChoiceLimit: 3
+    });
+  </script>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerColumnFill: 'row',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      spaceBetween: 34,
+      slidesPerGroup: 2,
+    },
+    // when window width is >= 640px
+    1400: {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    }
+    }
+    });
+  </script>
 </body>
 </html>

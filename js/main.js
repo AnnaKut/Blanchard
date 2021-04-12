@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
       enter.classList.toggle(classMenu);
       document.body.classList.toggle('fixed-page');
   });
-  document.querySelectorAll('.header-nav-link').forEach((link) => {
+  document.querySelectorAll('.main-header__link').forEach((link) => {
     link.addEventListener('click', () => {
       removeMenu();
     });

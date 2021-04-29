@@ -11,6 +11,7 @@
   href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
   />
   <link href="css/choices.min.css" rel="stylesheet">
+  <link href="css/accordion.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
   <link href="css/style.css" rel="stylesheet">
@@ -156,6 +157,7 @@
     <section id="banner">
       <div class="banner">
         <div class="container banner__block">
+          <h1 class="visually-hidden">Художественная галерея Blanchard</h1>
           <div class="banner__headline">Прикоснитесь к прекрасному</div>
           <p class="banner__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
           <a href="#contacts" class="btn banner__btn">Подписаться на рассылку</a>
@@ -176,14 +178,11 @@
           <form class="gallery__form flex">
             <h2 class="second-title gallery__title">Галерея</h2>
             <p class="gallery__text gallery__text_filter">Фильтровать по:</p>
-            <select id="select" class="gallery__select-author">
-              <option class="gallery__author">Рублёв</option>
-              <option class="gallery__author">Репин</option>
-              <option class="gallery__author">Малевич</option>
-              <option class="gallery__author" selected>Автор</option>
+            <select id="select" class="gallery__select">
+              <option class="gallery__option">Автор</option>
+              <option class="gallery__option">Направление</option>
+              <option class="gallery__option">Техника</option>
             </select>
-            <input class="gallery__input gallery__input_top" placeholder="Направление">
-            <input class="gallery__input gallery__input_bottom" placeholder="Техника">
           </form>
           <div class="gallery__swiper">
             <div class="swiper-container">
@@ -222,9 +221,401 @@
         </div>
       </div>
     </section>
+
     <section id="catalog">
-      <div class="container">
-        <h2 class="second-title">Каталог</h2>
+      <div class="container catalog">
+        <div class="catalog__headline">
+          <h2 class="second-title catalog__title">Каталог</h2>
+          <ul class="catalog__country-nav flex">
+            <li class="catalog__country-tab">
+              <button class="catalog__btn catalog__btn_france" data-path="france"></button>
+            </li>
+            <li class="catalog__country-tab">
+              <button class="catalog__btn catalog__btn_germany" data-path="germany"></button>
+            </li>
+            <li class="catalog__country-tab">
+              <button class="catalog__btn catalog__btn_italy catalog__btn_active" data-path="italy"></button>
+            </li>
+            <li class="catalog__country-tab">
+              <button class="catalog__btn catalog__btn_russia" data-path="russia"></button>
+            </li>
+            <li class="catalog__country-tab">
+              <button class="catalog__btn catalog__btn_belgium" data-path="belgium"></button>
+            </li>
+          </ul>
+        </div>
+        <p class="catalog__text">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.</p>
+        
+        <div class="catalog__content" data-target="france">
+          <div id="mone" class="catalog__artist catalog__artist_france">
+            <img class="catalog__artist-img" src="img/mone.jpg">
+            <h3 class="catalog__artist-name third-title">Клод Моне</h3>
+            <div class="catalog__years-life">14 ноября 1840 — 5 декабря 1926.</div>
+            <p class="catalog__artist-text">Французский живописец, один из основателей импрессионизма.</p>
+          </div>
+          <div id="Gogen" class="catalog__artist catalog__artist_france catalog__artist_active">
+            <img class="catalog__artist-img" src="img/Gogen.jpg">
+            <h3 class="catalog__artist-name third-title">Поль Гоген</h3>
+            <div class="catalog__years-life">7 июня 1848 — 8 мая 1903.</div>
+            <p class="catalog__artist-text">Французский живописец, скульптор-керамист и график. Наряду с Сезанном и Ван Гогом был крупнейшим представителем постимпрессионизма. В начале 1870-х годов начал заниматься живописью как любитель. Ранний период творчества связан с импрессионизмом. С 1880 года участвовал в выставках импрессионистов. С 1883 года профессиональный художник. Работы Гогена при жизни не находили спроса, художник был беден. Картина Гогена «Когда свадьба?» — одна из самых дорогих проданных картин.</p>
+          </div>
+          <ul class="catalog__accordion accordion">
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1400 по 1599 гг.</h3>
+                <div class="accordion__button-years"><div class="accordion__arrow"></div></div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#mone" class="artists__link artists__link_france" data-id="mone">Клод Моне</a></li>
+                </ul>           
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1600 по 1799 гг.</h3>
+                <div class="accordion__button-years"><div class="accordion__arrow"></div></div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#Gogen" class="artists__link artists__link_france artists__link_active" data-id="Gogen">Поль Гоген</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1800 г.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#Gogen" class="artists__link artists__link_france" data-id="Gogen">Поль Гоген</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog__content" data-target="germany">
+          <div id="kaspar" class="catalog__artist catalog__artist_germany">
+            <img class="catalog__artist-img" src="img/Каспар.jpg">
+            <h3 class="catalog__artist-name third-title">Каспар Давид Фридрих</h3>
+            <div class="catalog__years-life">5 сентября 1774 — 7 мая 1840.</div>
+            <p class="catalog__artist-text">Немецкий художник, один из крупнейших представителей романтического направления в живописи Германии (наряду с Филиппом Отто Рунге). Среди его последователей — классик норвежской живописи Юхан Кристиан Даль.</p>
+          </div>
+          <div id="richter" class="catalog__artist catalog__artist_germany catalog__artist_active">
+            <img class="catalog__artist-img" src="img/richter.jpg">
+            <h3 class="catalog__artist-name third-title">Герхард Рихтер</h3>
+            <div class="catalog__years-life">9 февраля 1932 года — настоящее время.</div>
+            <p class="catalog__artist-text">Немецкий живописец. Его произведения хранятся в собраниях крупнейших музеев Европы. В 2005 году он занимал 1-е место в ежегодном списке журнала «Капитал» — самые дорогие и успешные мастера современной немецкой живописи. Стоял у истоков зарождения направления капиталистического реализма.</p>
+          </div>
+          <ul class="catalog__accordion accordion">
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1400 по 1599 гг.</h3>
+                <div class="accordion__button-years"><div class="accordion__arrow"></div></div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#kaspar" class="artists__link artists__link_germany" data-id="kaspar">Каспар Давид Фридрих</a></li>
+                </ul>           
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1600 по 1799 гг.</h3>
+                <div class="accordion__button-years"><div class="accordion__arrow"></div></div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#richter" class="artists__link artists__link_germany artists__link_active" data-id="richter">Герхард Рихтер</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1800 г.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#richter" class="artists__link artists__link_germany" data-id="richter">Герхард Рихтер</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="catalog__content catalog__content_active" data-target="italy">
+          <div id="domenico" class="catalog__artist catalog__artist_italy catalog__artist_active">
+            <img class="catalog__artist-img" src="img/domenico.jpg">
+            <h3 class="catalog__artist-name third-title">Доменико Гирландайо</h3>
+            <div class="catalog__years-life">2 июня 1448 — 11 января 1494.</div>
+            <p class="catalog__artist-text">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).</p>
+          </div>
+          <div id="tucci" class="catalog__artist catalog__artist_italy">
+            <img class="catalog__artist-img" src="img/БАТ.jpg">
+            <h3 class="catalog__artist-name third-title">Бьяджо д’Антонио Туччи</h3>
+            <div class="catalog__years-life">ок. 1445 — 1 июня 1516.</div>
+            <p class="catalog__artist-text">Итальянский художник эпохи Возрождения. Его творчество было вдохновлено работами Филиппо Липпи, Андреа Верроккьо, Доменико Гирландайо.</p>
+          </div>
+          <div id="verrocchio" class="catalog__artist catalog__artist_italy">
+            <img class="catalog__artist-img" src="img/Верроккьо.jpg">
+            <h3 class="catalog__artist-name third-title">Андреа Верроккьо</h3>
+            <div class="catalog__years-life"> 1435 — 10 октября 1488.</div>
+            <p class="catalog__artist-text">Скульптор и живописец эпохи Возрождения, представитель Флорентийской школы. Среди его учеников — Сандро Боттичелли, Пьетро Перуджино, Леонардо да Винчи и Лоренцо ди Креди.</p>
+          </div>
+          <ul class="catalog__accordion accordion">
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1400 по 1499 гг.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Бенедетто ди Биндо</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Бергоньоне, Амброджо</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Биссоло, Франческо</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Больтраффио, Джованни</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Бонсиньори, Франческо</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Боттичини, Рафаэлло</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Брамантино</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Бреа, Людовико</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Бьяджо д’Антонио Туччи</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Веккьетта</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Андреа Верроккьо</a></li>
+                  <li class="artists__item"><a href="#domenico" class="artists__link artists__link_italy artists__link_active" data-id="domenico">Доменико Гирландайо</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Беноццо Гоццоли</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Граначчи, Франческо</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Грегорио ди Чекко</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Джованни да Удине</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Джованни ди Паоло</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Джорджоне</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Парентино, Бернардо</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Пезеллино</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Пьетро Перуджино</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Перуцци, Бальдассаре</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Пизанелло</a></li>
+                  <li class="artists__item"><a href="#tucci" class="artists__link artists__link_italy" data-id="tucci">Пинтуриккьо</a></li>
+                </ul>           
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1500 по 1599 гг.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Иероним Босх</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян ван Эйк</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Питер Брейгель Старший</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Винсент ван Гог</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян Вермеер</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1600 по 1699 гг.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Иероним Босх</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян ван Эйк</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Питер Брейгель Старший</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Винсент ван Гог</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян Вермеер</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1700 по 1799 гг.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Иероним Босх</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян ван Эйк</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Питер Брейгель Старший</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Винсент ван Гог</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян Вермеер</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1800 по 1899 гг.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Иероним Босх</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян ван Эйк</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Питер Брейгель Старший</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Винсент ван Гог</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян Вермеер</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1900 по 1999 гг.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Иероним Босх</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян ван Эйк</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Питер Брейгель Старший</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Винсент ван Гог</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян Вермеер</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 2000 г.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Иероним Босх</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян ван Эйк</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Питер Брейгель Старший</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Винсент ван Гог</a></li>
+                  <li class="artists__item"><a href="#verrocchio" class="artists__link artists__link_italy" data-id="verrocchio">Ян Вермеер</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="catalog__content" data-target="russia">
+          <div id="rublev" class="catalog__artist catalog__artist_russia">
+            <img class="catalog__artist-img" src="img/rublev.jpg">
+            <h3 class="catalog__artist-name third-title">Андрей Рублев</h3>
+            <div class="catalog__years-life">1360 — 17 октября 1428.</div>
+            <p class="catalog__artist-text">Русский иконописец московской школы иконописи, книжной и монументальной живописи XV века. Канонизирован Русской православной церковью в лике преподобных.</p>
+          </div>
+          <div id="vasneczov" class="catalog__artist catalog__artist_russia catalog__artist_active">
+            <img class="catalog__artist-img" src="img/viktor-vasneczov.jpg">
+            <h3 class="catalog__artist-name third-title">Виктор Михайлович Васнецов</h3>
+            <div class="catalog__years-life">3 мая 1848 — 23 июля 1926.</div>
+            <p class="catalog__artist-text">Русский художник-живописец и архитектор, мастер исторической и фольклорной живописи. Васнецов является основоположником «неорусского стиля», преобразованного из исторического жанра и романтических тенденций, связанных с фольклором и символизмом. Творчество художника сыграло важную роль в развитии российского изобразительного искусства от эпохи передвижничества к стилю модерн.</p>
+          </div>
+          <ul class="catalog__accordion accordion">
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1400 по 1599 гг.</h3>
+                <div class="accordion__button-years"><div class="accordion__arrow"></div></div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#rublev" class="artists__link artists__link_russia" data-id="rublev">Андрей Рублев</a></li>
+                </ul>           
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1600 по 1799 гг.</h3>
+                <div class="accordion__button-years"><div class="accordion__arrow"></div></div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#vasneczov" class="artists__link artists__link_russia artists__link_active" data-id="vasneczov">Виктор Михайлович Васнецов</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1800 г.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#vasneczov" class="artists__link artists__link_russia" data-id="vasneczov">Виктор Михайлович Васнецов</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="catalog__content" data-target="belgium">
+          <div id="vincent" class="catalog__artist catalog__artist_belgium catalog__artist_active">
+            <img class="catalog__artist-img" src="img/Autoportrait_de_Vincent_van_Gogh.JPG">
+            <h3 class="catalog__artist-name third-title">Винсент Ван Гог</h3>
+            <div class="catalog__years-life">30 марта 1853 — 29 июля 1890.</div>
+            <p class="catalog__artist-text">Нидерландский художник-постимпрессионист, чьи работы оказали вневременное влияние на живопись XX века. За десять с небольшим лет он создал более 2100 произведений, включая около 860 картин маслом. Среди них — портреты, автопортреты, пейзажи и натюрморты, с изображением оливковых деревьев, кипарисов, полей пшеницы и подсолнухов. При жизни был практически обойдён вниманием критиков.</p>
+          </div>
+          <div id="Vermeer" class="catalog__artist catalog__artist_belgium">
+            <img class="catalog__artist-img" src="img/vermeer.jpeg">
+            <h3 class="catalog__artist-name third-title">Ян Вермееер</h3>
+            <div class="catalog__years-life">31 октября 1632 — 15 декабря 1675.</div>
+            <p class="catalog__artist-text">Нидерландский художник-живописец, мастер бытовой живописи и жанрового портрета. Один из самых талантливых (наряду с де Хохом) последователей Терборха. Творчество Рембрандта, Хальса и Вермеера принято считать вершиной голландского искусства золотого века.</p>
+          </div>
+          <ul class="catalog__accordion accordion">
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1400 по 1599 гг.</h3>
+                <div class="accordion__button-years"><div class="accordion__arrow"></div></div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#vincent" class="artists__link artists__link_belgium" data-id="vincent">Бенедетто ди Биндо</a></li>
+                  <li class="artists__item"><a href="#Vermeer" class="artists__link artists__link_belgium" data-id="Vermeer">Бергоньоне, Амброджо</a></li>
+                </ul>           
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1600 по 1799 гг.</h3>
+                <div class="accordion__button-years"><div class="accordion__arrow"></div></div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#vincent" class="artists__link artists__link_belgium artists__link_active" data-id="vincent">Винсент ван Гог</a></li>
+                  <li class="artists__item"><a href="#Vermeer" class="artists__link artists__link_belgium" data-id="Vermeer">Ян Вермеер</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__years flex">
+                <h3 class="accordion__title-years third-title">C 1800 г.</h3>
+                <div class="accordion__button-years">
+                  <div class="accordion__arrow"></div>
+                </div>
+              </div>
+              <div class="accordion__artists artists">
+                <ul class="artists__list">
+                  <li class="artists__item"><a href="#vincent" class="artists__link artists__link_belgium" data-id="vincent">Винсент ван Гог</a></li>
+                  <li class="artists__item"><a href="#Vermeer" class="artists__link artists__link_belgium" data-id="Vermeer">Ян Вермеер</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </section>
     <section id="events">
@@ -265,7 +656,6 @@
       itemSelectText: '',
       searchEnabled: false,
       shouldSort: false,
-      renderChoiceLimit: 3
     });
   </script>
 
@@ -304,5 +694,16 @@
     }
     });
   </script>
+
+<script src="js/accordion.js"></script>
+
+<script>
+  document.querySelectorAll(".accordion").forEach((el) => {
+    new Accordion(el, {
+    modal: true,
+    });
+  });
+
+</script>
 </body>
 </html>

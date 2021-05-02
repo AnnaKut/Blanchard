@@ -24,10 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
     art.forEach((artists) => {
       artists.classList.remove('artists__link_active')
     })
-    document.querySelector(`[data-id="${id}"]`).classList.add('artists__link_active')
-
+    document.querySelector(`[data-id="${id}"]`).classList.add('artists__link_active');
     })
-  
     })
   }
 
@@ -66,6 +64,15 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       });
     })
+  });
+
+  const btnEvents = document.querySelector('.events__btn');
+
+  btnEvents.addEventListener('click', () => {
+    document.querySelectorAll('.events__item').forEach((item) => {
+      item.classList.add('events__item_active')
+    });
+    btnEvents.classList.add('events__btn_hidden')
   });
 
   showArtistPage();
